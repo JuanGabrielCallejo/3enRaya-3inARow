@@ -129,13 +129,15 @@ class Game extends React.Component {
       <>
         <div className="all">
 
-          <h1>JUGUEMOS A 3 EN RAYA</h1>
+          <h1>¡JUGUEMOS A 3 EN RAYA!</h1>
           <p>
-            Empieza el jugador 1 (X) <br />
+            Empieza el jugador 1 (X) 
             eligiendo casilla primero. <br />
+            Debes conseguir 3 figuras seguidas ortogonalmente.<br/>
             Los movimientos quedarán guardados y <br />
-            se podrá volver a cualquiera.
+            se podrá volver a cualquiera de ellos.
           </p>
+        </div>
           <div className="status">{status}</div>
         
         
@@ -149,7 +151,6 @@ class Game extends React.Component {
           <div className="infoButtons">
             <div>{moves}</div>
           </div>
-        </div>
       </>
     );
   }
@@ -176,3 +177,4 @@ function calculateWinner(squares) {
     }
   }
 }
+

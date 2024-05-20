@@ -5,7 +5,10 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
+
 
 .all {
   /* background-color: aqua; */
@@ -15,6 +18,7 @@ body {
 
 h1 {
   background-color: rgb(59, 49, 201);
+  color:rgb(218, 207, 207);
   font-family: fantasy;
   font-size: xx-large;
   text-align: center;
@@ -24,7 +28,7 @@ h1 {
 
 p {
   font-family: fantasy;
-  color: white;
+  color: rgb(218, 207, 207);
   text-align: center;
   padding: 10px;
   background-color: rgb(133, 10, 170);
@@ -44,13 +48,12 @@ p {
   font-size: x-large;
   font-family: fantasy;
   margin-top: 15px;
-  color: white;
-  justify-content: center;
+  color: rgb(218, 207, 207);
   text-align: center;
   margin-bottom: 10px;
   padding: 5px;
   border-radius: 10px;
-  position: relative;
+  /* position: relative; */
 }
 
 .square {
@@ -72,7 +75,7 @@ p {
 }
 
 .game {
-  background-color: rgb(85, 35, 142);
+  /* background-color: rgb(85, 35, 142); */
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -84,7 +87,7 @@ p {
   display: flex;
   display: inline-block;
   margin-top: 20px;
-  background-color: orange;
+  /* background-color: rgb(212, 212, 212); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,5 +126,75 @@ p {
   }
   to {
     transform: rotateY(0deg);
+  }
+}
+
+@keyframes fire {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100% 100%;
+  }
+}
+
+/* estilos para tablets */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: x-large;
+    padding: 8px;
+  }
+
+  p {
+    font-size: medium;
+    padding: 8px;
+  }
+
+  .square {
+    height: 60px;
+    width: 60px;
+    line-height: 24px;
+    border: 2px solid #000000;
+  }
+
+  .status {
+    font-size: large;
+    padding: 4px;
+  }
+
+  .historyButton {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* estilos para smartphones */
+@media (max-width: 480px) {
+  h1 {
+    font-size: large;
+    padding: 6px;
+  }
+
+  p {
+    font-size: small;
+    padding: 6px;
+  }
+
+  .square {
+    height: 50px;
+    width: 50px;
+    line-height: 20px;
+    border: 2px solid #000000;
+  }
+
+  .status {
+    font-size: medium;
+    padding: 3px;
+  }
+
+  .historyButton {
+    padding: 6px 12px;
+    font-size: 12px;
   }
 }
