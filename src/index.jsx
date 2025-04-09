@@ -133,7 +133,7 @@ class Game extends React.Component {
           <p>
             Empieza el jugador 1 (X) 
             eligiendo casilla primero. <br />
-            Debes conseguir 3 figuras seguidas ortogonalmente <br/>(vertical, horizontal o diagonalemente).<br/>
+            Debes conseguir 3 figuras seguidas ortogonalmente <br/>(vertical, horizontal o diagonalmente).<br/>
             Los movimientos quedarán guardados y <br />
             se podrá volver a cualquiera de ellos.
           </p>
