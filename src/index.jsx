@@ -129,7 +129,7 @@ class Game extends React.Component {
       <>
         <div className="all">
 
-          <h1>¡JUGUEMOS A 3 EN RAYA!</h1>
+          <h1 className="gameTitle">¡JUGUEMOS A 3 EN RAYA!</h1>
           <p>
             Empieza el jugador 1 (X) 
             eligiendo casilla primero. <br />
@@ -137,20 +137,21 @@ class Game extends React.Component {
             Los movimientos quedarán guardados y <br />
             se podrá volver a cualquiera de ellos.
           </p>
-        </div>
           <div className="status">{status}</div>
-        
-        
-        <div className="game-board ">
-          <Board className="cuadrados"
-            squares={current.squares}
-            onClick={(i) => this.handleClick(i)}
-          />
-        </div>
         
           <div className="infoButtons">
             <div>{moves}</div>
           </div>
+        
+          <div className="game-board ">
+            <Board className="cuadrados"
+              squares={current.squares}
+              onClick={(i) => this.handleClick(i)}/>
+          </div>
+          
+
+        </div>
+        
       </>
     );
   }

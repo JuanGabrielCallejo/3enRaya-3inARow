@@ -13,52 +13,53 @@ body {
   /* background-color: aqua; */
   display: flex;
   display: inline-block;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-h1 {
-  background-color: rgb(59, 49, 201);
+.gameTitle {
+  background-color: rgb(117, 91, 6);
   color: rgb(218, 207, 207);
-  font-family: fantasy;
+  border-radius: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: xx-large;
   text-align: center;
-  padding: 10px;
-  border-radius: 10px;
 }
 
 p {
-  font-family: fantasy;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: rgb(218, 207, 207);
   text-align: center;
   padding: 10px;
-  background-color: rgb(133, 10, 170);
+  background-color: rgb(64, 5, 82);
 
   border-radius: 5px;
 }
 
 .game-board {
-  margin-top: 10px;
+  transform: scale(1.2);
+  margin-top: 40px;
   /* background-color: blue; */
   display: flex;
   justify-content: center;
 }
 
 .status {
-  background-color: rgb(233, 10, 10);
+  background-color: rgb(131, 9, 9);
   font-size: x-large;
-  font-family: fantasy;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin-top: 15px;
   color: rgb(218, 207, 207);
   text-align: center;
   margin-bottom: 10px;
   padding: 5px;
   border-radius: 10px;
-  /* position: relative; */
 }
 
 .square {
-  display: flex;
-  display: inline-block;
-  background: #706d6e;
+  background: #d6caca;
   border-radius: 10px;
   border: 3px solid #000000;
   font-weight: bold;
@@ -83,22 +84,24 @@ p {
 }
 
 .infoButtons {
-  display: flex;
-  display: inline-block;
-  margin-top: 20px;
-  /* background-color: rgb(212, 212, 212); */
-  display: flex;
   justify-content: center;
   align-items: center;
-  align-content: center;
+
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  /* background-color: white; */
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .historyButton {
-  font-family: fantasy;
-  background-color: #ca5c1c;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #700d0d;
   color: white;
   padding: 10px 20px;
-  text-decoration: none;
   font-size: 15px;
   margin: 1px 1px;
   cursor: pointer;
@@ -107,13 +110,13 @@ p {
 }
 
 .historyButton:hover {
-  background-color: #45a049;
+  background-color: #681980;
 }
 
-.historyButton:active {
+/* .historyButton:active {
   background-color: #3e8e41;
   transform: translateY(2px);
-}
+} */
 
 .vertical-rotate {
   animation: rotateY 0.5s linear;
@@ -169,7 +172,7 @@ p {
 }
 
 /* estilos para smartphones */
-@media (max-width: 480px) {
+@media (max-width: 479px) {
   h1 {
     font-size: large;
     padding: 6px;
@@ -192,8 +195,13 @@ p {
     padding: 3px;
   }
 
+  .infoButtons {
+    display: flex;
+    background-color: white;
+  }
+
   .historyButton {
-    padding: 6px 12px;
+    padding: 12px 12px;
     font-size: 12px;
   }
 }
