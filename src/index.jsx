@@ -128,30 +128,27 @@ class Game extends React.Component {
     return (
       <>
         <div className="all">
-
           <h1 className="gameTitle">¡JUGUEMOS A 3 EN RAYA!</h1>
           <p>
-            Empieza el jugador 1 (X) 
-            eligiendo casilla primero. <br />
-            Debes conseguir 3 figuras seguidas ortogonalmente <br/>(vertical, horizontal o diagonalmente).<br/>
+            Empieza el jugador 1 (X) eligiendo casilla primero. <br />
+            Debes conseguir 3 figuras iguales seguidas
+            <br /> de manera vertical, horizontal o diagonal. <br />
             Los movimientos quedarán guardados y <br />
             se podrá volver a cualquiera de ellos.
           </p>
           <div className="status">{status}</div>
-        
-        
-          <div className="game-board ">
-            <Board className="cuadrados"
-              squares={current.squares}
-              onClick={(i) => this.handleClick(i)}/>
-          </div>
-          
 
-        </div>
-          <div className="infoButtons">
-            <div>{moves}</div>
+          <div className="game-board ">
+            <Board
+              className="cuadrados"
+              squares={current.squares}
+              onClick={(i) => this.handleClick(i)}
+            />
           </div>
-        
+        </div>
+        <div className="infoButtons">
+          <div>{moves}</div>
+        </div>
       </>
     );
   }
@@ -178,4 +175,3 @@ function calculateWinner(squares) {
     }
   }
 }
-
